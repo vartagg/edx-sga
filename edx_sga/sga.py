@@ -467,7 +467,7 @@ class StaffGradedAssignmentXBlock(XBlock):
 def _file_storage_path(url, sha1, filename):
     path = url[6:] + '/' + sha1
     path += os.path.splitext(filename)[1]
-    return path
+    return path.lower()
 
 
 def _get_sha1(file):
